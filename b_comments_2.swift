@@ -19,6 +19,5 @@ func fetchProfile(id: String) async {
     
     // Second call to get data:
     URLSession(configuration: .default).dataTask(with: url) { data, _, _ in
-        // Handle data
     }.resume()
 }

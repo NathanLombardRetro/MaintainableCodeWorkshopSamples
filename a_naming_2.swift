@@ -1,7 +1,14 @@
 import Foundation
 
-// TODO: Factor out a base class so we can add alternative implementations, e.g. logging to file
-class Logger {
+class Logger{
+    func log(_ text:String){}
+}
+class MesageLogger:Logger {
+    func log(_ text: String) {
+        print(text)
+    }
+}
+class FileLogger:Logger {
     func log(_ text: String) {
         print(text)
     }

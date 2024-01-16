@@ -1,27 +1,27 @@
 import Foundation
 
 class NamingCodeSamples {
-    var x = 0
-    var strName = "default"
-    var start = Date()
+    var interval = 0
+    var name = "default"
+    var startDate = Date()
     
-    func incCount(by x: Int) {
-        self.x += x
+    func increaseInterval(by interval: Int) {
+        self.interval += interval
     }
     
-    func addTimeToStart(_ x: Double) {
-        start = start.addingTimeInterval(x)
+    func addSecondsToStart(seconds: Double) {
+        startDate = startDate.addingTimeInterval(count)
     }
     
-    var empty: Bool {
-        return strName == ""
+    var isEmpty: Bool {
+        return name == ""
     }
     
     func nameLength() -> Int {
-        var a = 0
-        for _ in strName {
-            a += 1
+        var result = 0
+        for _ in name {
+            result += 1
         }
-        return a
+        return result
     }
 }
