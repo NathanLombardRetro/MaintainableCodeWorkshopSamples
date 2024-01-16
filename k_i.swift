@@ -1,40 +1,13 @@
-
-
-protocol HasSpeed {
-    var topSpeed: Int { get }
-}
-
-protocol HasWheels {
+protocol Vehicle {
     var numberOfWheels: Int { get }
-}
-
-protocol LandVehicle: Vehicle {
-    
+    var topSpeed: Int { get }
     var numberOfDoors: Int { get }
 }
 
-protocol AirVehicle: Vehicle {
-    var numberOfBlades: Int { get }
-    var maxHeight: Int { get }
+class Car: Vehicle {
+    var numberOfWheels: Int { 4 }
+    var topSpeed: Int { 120 }
+    var numberOfDoors: Int { 5 }
 }
 
-class Car: LandVehicle {
-    var numberOfWheels = 4
-    var numberOfDoors = 4
-    var topSpeed = 200
-    
-    
-}
-
-class Helicopter: Vehicle {
-    var numberOfWheels: Int
-    
-    var numberOfBlades = 2
-    var topSpeed = 300
-    var numberOfDoors = 2
-    var maxHeight = 20
-}
-
-func flyByHelicopter(_ vehicle: Vehicle) {
-    
-}
+// TODO: Make Helicopter
