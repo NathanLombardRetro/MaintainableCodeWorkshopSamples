@@ -7,3 +7,8 @@ struct PersonWithAge {
         print("\(name) was born in \(birthYear)")
     }
 }
+
+func testPersonWithAge() {
+    let person = PersonWithAge(name: "Phlippie", age: 33)
+    person.printBirthYear(2024)
+}
