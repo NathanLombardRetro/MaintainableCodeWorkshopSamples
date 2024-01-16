@@ -12,3 +12,11 @@ func addQueryParams(_ queryParams: [QueryParam], to path: String) -> String {
     }
     return result
 }
+
+//Guarenteed non empty array
+struct NonEmptyList {
+    let head: QueryParam
+    let tail:[QueryParam]
+}
+
+let xs =NonEmptyList(head:QueryParam(key:"",value:""),tail:[])

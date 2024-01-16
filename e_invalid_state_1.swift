@@ -1,6 +1,6 @@
 struct PersonWithAge {
     let name: String
-    let age: Int
+    let age: UInt
     
     func printBirthYear(currentYear: Int) {
         let birthYear = currentYear - age

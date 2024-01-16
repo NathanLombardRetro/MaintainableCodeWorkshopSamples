@@ -1,13 +1,19 @@
-func fetch(_ resultHandler: @escaping (Int?, Error?) -> Void) {
-    // ...
+enum Result{
+    case success(Int)
+    case failure(Error)
+}
+
+
+func fetch(_ resultHandler: @escaping (Result) -> Void) {
+    resultHandler(.success(1))
+    resultHandler(.failure(Error()))
 }
 
 func testFetch() {
-    fetch { value, error in
-        if let value = value {
-            print("Fetched \(value)")
-        } else if let error = error {
-            print("Oops! \(error.localizedDescription)")
-        }
+    fetch { result in
+            switch result {
+            case .success(let:value):
+            case .failure(let:value):    
+            }
     }
 }
